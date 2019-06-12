@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+h4  {
+    width: 100%;
+}
+pre{
+    background: #272822 !important;
+    width: 100%;
+    padding: 16px;
+    border-radius: 5px;
+    color: greenyellow;
+    & code {
+    color: rgb(218, 218, 218);    
+    background: 0 0;
+    text-shadow: 0 1px rgba(0,0,0,.3);
+    font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+    }

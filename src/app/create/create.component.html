@@ -1,0 +1,19 @@
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="row col-8">
+      <input type="text" [(ngModel)]="title" placeholder="Title" class="heading">
+    </div>
+    <div  class="row col-8 editable pt-3 ml-2" style="height: 100%;width: 100%;overflow: hidden;">
+
+    </div>
+  
+  </div>
+
+  <div class="col-8 mx-auto mt-3">
+      <label for="check">
+        <input (change)="enablefeature()"
+         type="checkbox"><span class="ml-2">Do you want to featured this post.</span>
+      </label>
+      <button type="button" class="btn btn-block btn-outline-primary" (click)="OnSave()">Save</button>
+  </div>
+</div>

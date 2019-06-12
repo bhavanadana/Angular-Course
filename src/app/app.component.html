@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>
+
+<div>
+    <div class="hide" style="display: none">
+        <a 
+        [routerLink]="['link', i]"
+        routerLinkActive="router-link-active"
+         *ngFor="let item of GetLinks();let i = index">
+        page {{item}}
+        </a>
+    </div>
+</div>

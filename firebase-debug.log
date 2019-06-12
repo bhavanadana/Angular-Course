@@ -1,0 +1,13 @@
+[debug] [2019-06-11T05:23:03.082Z] ----------------------------------------------------------------------
+[debug] [2019-06-11T05:23:03.084Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2019-06-11T05:23:03.084Z] CLI Version:   6.11.0
+[debug] [2019-06-11T05:23:03.084Z] Platform:      linux
+[debug] [2019-06-11T05:23:03.084Z] Node Version:  v10.16.0
+[debug] [2019-06-11T05:23:03.085Z] Time:          Tue Jun 11 2019 10:53:03 GMT+0530 (India Standard Time)
+[debug] [2019-06-11T05:23:03.085Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-11T05:23:03.090Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-11T05:23:03.090Z] > authorizing via signed-in user
+[debug] [2019-06-11T05:23:03.091Z] [iam] checking project d-drops for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-11T05:23:03.092Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/d-drops:testIamPermissions  
+

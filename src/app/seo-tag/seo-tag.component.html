@@ -1,0 +1,87 @@
+<div class="header">
+
+  </div>
+  <div class="m-3">
+    <button data-toggle="modal" (click)="reset()" data-target="#courseModal" class="btn btn-block btn-primary btn-round">Create Seo Tag</button>
+  </div> <br>
+  <div class="container mt-2">
+  
+    <div class="row">
+      <div class="card " style="width: 100%">
+  
+        <div class="card-body">
+          <div class="row">
+            <div *ngFor="let item of seoTags |async " class="col-lg-6 col-md-6 col-sm-12">
+              <div class="card m-2">
+                <div class="card-header text-center">
+                  <div class="row text-uppercase">
+                    <div class="col-6">
+                      <a [routerLink]="[ '/sectionDetail', item.id ]">
+                      {{item.name}}</a></div>
+                    <div class="col-6">{{item.videoUrl }}</div>
+                  </div>
+                </div>
+                <div class="card-body">
+                 <span>
+                   <li *ngFor="let tag of item | keyvalue">
+                     {{tag.key}} - {{tag.value}}
+                   </li>
+                  </span>
+                </div>
+                <div class="card-footer p-2">
+                    <div class="row">
+                        <div class="col-6 m-0">
+                            <button (click)="delete(item.id)" class="btn btn-block btn-danger">Delete</button>
+                        </div>
+                        <div class="col-6 m-0">
+                              <button 
+                              data-toggle="modal" data-target="#courseModal"
+                              (click)="edit(item)" class="btn btn-block btn-success">Edit</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  <div class="modal fade" id="courseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Interest Create</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body p-3">
+              <input type="text" class="form-control m-2" name="title" [(ngModel)]="seoTag.title" aria-describedby="helpId"
+                placeholder="Enter seoTag Page Title">
+  
+                <input type="text" class="form-control m-2" name="path" 
+                [(ngModel)]="seoTag.path" aria-describedby="helpId"
+                placeholder="Enter seoTag Page Path">
+                
+                <input type="text" class="form-control m-2" name="description" [(ngModel)]="seoTag.description" aria-describedby="helpId"
+                placeholder="Enter seoTag description">
+                <input type="text" class="form-control m-2" name="image" [(ngModel)]="seoTag.image" aria-describedby="helpId"
+                placeholder="Enter seoTag image">
+                <input type="text" class="form-control m-2" name="keywords" [(ngModel)]="seoTag.keywords" aria-describedby="helpId"
+                placeholder="Enter seoTag keywords">
+             
+                
+                        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" *ngIf="!update" (click)="save()" class="btn btn-primary">Create Course</button>
+          <button type="button" *ngIf="update" (click)="save()" class="btn btn-primary">Update Course</button>
+        </div>
+      </div>
+    </div>
+  </div>
