@@ -1,0 +1,10 @@
+
+    <div class="card border-0 ">
+      <div class="card-header shadow" [ngStyle]="GetStyle(post.feature_image)">
+
+      </div>
+      <div class="card-body border-0" style="height: 200px">
+        <h6 class="card-title font-weight-bold">{{post.title | titlecase   }}</h6>
+        <p>{{post.excerpt | truncatetext}}</p>
+      </div>
+    </div>

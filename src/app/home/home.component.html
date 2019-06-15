@@ -1,0 +1,27 @@
+
+<div class="alert alert-success" *ngIf="selectedposttitle" role="alert">
+   {{selectedposttitle}}
+  </div>
+<div class="row">
+
+    <div class="col-lg-8 col-md-8 col-sm-12">
+    <app-slider 
+    (onslideselect)="chagePostTitle($event)"
+    [sliderData]="postsForSlider"
+    
+    
+    ></app-slider>
+    </div>
+    <div class="col-lg-4 col-md-4 mt-2 col-sm-12">
+   <app-featureblock [featurePosts]="postsForSlider" ></app-featureblock>
+
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+   
+      <app-postlist
+      [posts]="posts"
+      ></app-postlist>
+
+  </div>
