@@ -29,7 +29,7 @@
     "@nguniversal/express-engine": "^7.0.2",
     "@nguniversal/module-map-ngfactory-loader": "v7.0.2",
     "angularfire2": "^5.2.1",
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "firebase": "^6.1.1",
     "firebase-tools": "^6.11.0",
     "fs-extra": "^8.0.1",
